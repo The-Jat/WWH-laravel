@@ -85,5 +85,31 @@ Laravel provides us much more power than just writing a direct callback function
 php artisan make:controller myController
 ```
 
-* This will create a controller named as myController
+> This will create a controller named as myController in the location - app\Http\Controllers\myController.php
 
+* This file contains the myController class inherited from Controller class.
+
+```
+class myController extends Controller
+{
+    //
+}
+```
+
+Modify the myController class as below -
+
+```
+class mycontroller extends Controller {
+    public function index() {
+        return view('welcome'); // view name
+    }
+}
+
+```
+
+> Add the route in route/web.php
+
+syntax = Route::request_type('/url', 'ControllerName@functionName');
+```
+Route::request_type('/url', 'ControllerName@functionName');
+```
