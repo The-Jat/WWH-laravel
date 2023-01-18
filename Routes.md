@@ -7,10 +7,10 @@ In Laravel, routes are created inside the routes folder. They are created in the
 
 > routes/web.php     -> All web routes are defined here
 
-### Here is how the route for web in web.php looks like:
+### Here is how the root route for web in web.php looks like:
 ```
 
-// Creating a new route
+// Creating a new route, This one is root route
 Route::get('/', function() {
     return 'Hey ! Hello';
 });
@@ -19,4 +19,16 @@ Route::get('/', function() {
 > Output :-
 
 ![Routes](Routes_simple.png)
+
+
+### Here is how the custom route for web in web.php looks like:
+
+```
+// Creating a new route
+Route::get('/sayJaat', function() {
+    return 'Hey ! Mr. Jaat';
+});
+
+```
+> Output :-
 
