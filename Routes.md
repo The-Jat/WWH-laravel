@@ -32,3 +32,4 @@ Route::get('/sayJaat', function() {
 ```
 > Output :-
 
+![Routes non root](Routes_non_root.png)
