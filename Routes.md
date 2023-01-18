@@ -18,3 +18,5 @@ Route::get('/', function() {
 ```
 > Output :-
 
+![Routes](Routes_simple.png)
+
