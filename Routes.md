@@ -9,6 +9,13 @@ In Laravel, routes are created inside the routes folder. They are created in the
 
 > There is 4 types of route methods GET, POST, PUT, DELETE
 
+### Syntax: To write route is as given below:
+
+```
+// Syntax of a route
+Route::request_type('/url', 'function()');
+```
+
 ### Here is how the root route for web in web.php looks like:
 ```
 
@@ -35,3 +42,29 @@ Route::get('/sayJaat', function() {
 > Output :-
 
 ![Routes non root](Routes_non_root.png)
+
+---
+
+## Returning Web-page:
+
+Instead of just returning strings, we are going to return webpages when someone visits a route. Let’s see how we can do that. First of all create a file called welcome.blade.php in resources/views. In Laravel we have a built-in templating engine called Blade thus we write all of our webpages in *.blade.php not *.html.
+
+
+> routes/web.php
+
+```
+// Creating a new route
+Route::get('/', function() {
+    return view('welcome');
+});
+```
+> resourcs/view/welcome.blade.php
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h1>Hello! World from the View</h1>
+    </body>
+</html>
+```
