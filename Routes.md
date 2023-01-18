@@ -72,3 +72,18 @@ Route::get('/', function() {
 > Output :-
 
 ![Routes View](Routes_view.png)
+
+----
+
+## Routes with controllers:
+
+Laravel provides us much more power than just writing a direct callback function. We can actually make our routes point to a function inside the controllers. To do so let’s manually create our controller first and call it mycontroller. Just go to app/Http/Controllers and create a file called mycontroller.php. Write following code in this file:
+
+> To create the controller use the follow command :-
+
+```
+php artisan make:controller myController
+```
+
+* This will create a controller named as myController
+
