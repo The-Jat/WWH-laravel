@@ -68,3 +68,7 @@ Route::get('/', function() {
     </body>
 </html>
 ```
+
+> Output :-
+
+![Routes View](Routes_view.png)
