@@ -15,6 +15,7 @@ In Laravel, routes are created inside the routes folder. They are created in the
 // Syntax of a route
 Route::request_type('/url', 'function()');
 ```
+* This function takes two parameters, 1) endpoint, 2) closure
 
 ### Here is how the root route for web in web.php looks like:
 ```
@@ -45,7 +46,18 @@ Route::get('/sayJaat', function() {
 
 ---
 
-## Returning Web-page:
+### return by response method:
+
+```
+Route::get('/response', function () {
+    return response('Welcome');
+});
+```
+
+![Return by response](return_response.png)
+
+---
+## Returning View:
 
 Instead of just returning strings, we are going to return webpages when someone visits a route. Let’s see how we can do that. First of all create a file called welcome.blade.php in resources/views. In Laravel we have a built-in templating engine called Blade thus we write all of our webpages in *.blade.php not *.html.
 
