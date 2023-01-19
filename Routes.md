@@ -53,8 +53,18 @@ Route::get('/response', function () {
     return response('Welcome');
 });
 ```
-
 ![Return by response](return_response.png)
+
+> Render html by response
+
+```
+Route::get('/response', function () {
+    return response('<h1>Welcome<h1>');
+});
+```
+
+
+![Return by respone render html](Return_response_html.png)
 
 ---
 ## Returning View:
