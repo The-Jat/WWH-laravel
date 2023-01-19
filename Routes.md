@@ -44,6 +44,18 @@ Route::get('/sayJaat', function() {
 
 ![Routes non root](Routes_non_root.png)
 
+### passing url parameters:
+
+> passed url = http://127.0.0.1:8000/sayJaat/7
+
+```
+Route::get('/sayJaat/{id}', function($id) {
+    return 'Hey ! Mr. Jaat your id = '. $id;
+});
+```
+
+![Routes passing url parameters](route_parameter_passing_str.png)
+
 ---
 
 ### return by response method:
