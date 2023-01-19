@@ -44,7 +44,7 @@ Route::get('/sayJaat', function() {
 
 ![Routes non root](Routes_non_root.png)
 
-### passing url parameters:
+### Passing url wildcards:
 
 > passed url = http://127.0.0.1:8000/sayJaat/7
 
@@ -55,6 +55,16 @@ Route::get('/sayJaat/{id}', function($id) {
 ```
 
 ![Routes passing url parameters](route_parameter_passing_str.png)
+
+#### with response method
+
+```
+Route::get('/sayJaat/{id}', function($id) {
+    return response('Hey ! Mr. Jaat your id = '. $id);
+});
+```
+
+Same output as above
 
 ---
 
