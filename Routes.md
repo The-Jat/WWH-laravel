@@ -170,3 +170,30 @@ syntax = Route::request_type('/url', 'ControllerName@functionName');
 ```
 Route::request_type('/url', 'ControllerName@functionName');
 ```
+
+---
+
+## debugging methods 
+
+1. dd = die dump
+
+```
+Route::get('/sayJaat/{id}', function($id) {
+    dd($id);
+    return 'Hey ! Mr. Jaat your id = '. $id;
+})->where('id','[0-9]+');
+
+```
+* It will dump the id variable and stop the executon at that statement.
+
+
+2. ddd = die dump debug
+
+```
+Route::get('/sayJaat/{id}', function($id) {
+    ddd($id);
+    return 'Hey ! Mr. Jaat your id = '. $id;
+})->where('id','[0-9]+');
+```
+
+* It is more specific, it shows the id value, location in the code.
