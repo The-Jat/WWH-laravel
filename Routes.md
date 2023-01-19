@@ -66,6 +66,19 @@ Route::get('/sayJaat/{id}', function($id) {
 
 Same output as above
 
+
+### Constraints to wildcard
+
+Suppose if we want user to just enter number as wildcard.
+
+```
+Route::get('/sayJaat/{id}', function($id) {
+    return 'Hey ! Mr. Jaat your id = '. $id;
+})->where('id','[0-9]+');
+```
+
+* Now if the user enters wildcard other than number it will show 404 not found.
+
 ---
 
 ### return by response method:
