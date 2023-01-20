@@ -168,6 +168,84 @@ Route::get('/', function() {
 ![Routes View](Routes_view.png)
 
 
+## Passing data to view from route.
+
+* send from the route
+
+```
+// Passing Data to view
+Route::get('/welcome', function() {
+    return view('welcome', [
+        'heading' => 'This is a heading.'
+    ]);
+});
+```
+
+* recieve in the view
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h1><?php echo $heading; ?></h1>
+    </body>
+</html>
+```
+
+This will print "This is a heading".
+
+> More deep
+
+* Sender Route
+
+```
+// Passing Data to view
+Route::get('/welcome', function() {
+    return view('welcome', [
+        'heading' => 'This is a heading.',
+        'data' => [
+            [
+                'id' => 1,
+                "title" => 'The Delhi cold.',
+                "description" => 'Actually delhi cold is not so
+                cold  but the immunity of people is less than the
+                villagers. I had spent my new year in my village
+                and at that there I used to wear many layer than
+                here in the delhi.'
+            ],
+
+            [
+                'id' => 2,
+                "title" => 'The Delhi cold...',
+                "description" => 'Actually delhi cold is not so
+                cold  but the immunity of people is less than the
+                villagers. I had spent my new year in my village
+                and at that there I used to wear many layer than
+                here in the delhi.'
+            ]
+        ]
+    ]);
+});
+
+```
+
+* Reciever View
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h1><?php echo $heading; ?></h1>
+        <?php foreach ($data as $data): ?>
+            <h2><?php echo $data['title']; ?></h2>
+            <p><?php echo $data['description']; ?></p>
+        <?php endforeach; ?>
+    </body>
+</html>
+```
+
+![route to view data passing](route_to_view_data_passing.png)
+
 ----
 
 ## Routes with controllers:
