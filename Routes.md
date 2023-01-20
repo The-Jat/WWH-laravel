@@ -101,6 +101,43 @@ Route::get('/response', function () {
 
 ![Return by respone render html](Return_response_html.png)
 
+## Url Query String
+
+> Input Url = http://127.0.0.1:8000/search?name=mak&age=23
+
+```
+// include this class in web.php for Request object
+use Illuminate\Http\Request;
+```
+```
+// Query parameter
+Route::get('/search', function(Request $request){
+        dd($request);
+});
+```
+
+![Route query param dump by dd](route_query_param_dd.png)
+
+> More specific example:-
+
+```
+// Query parameter
+Route::get('/search', function(Request $request){
+        dd($request->name . ' ' . $request->age);
+});
+```
+
+![Route query param specific dump by dd](route_query_param_dd_specific.png)
+
+> or just return
+
+```
+// Query parameter
+Route::get('/search', function(Request $request){
+        return($request->name . ' ' . $request->age);
+});
+```
+
 ---
 ## Returning View:
 
@@ -129,6 +166,7 @@ Route::get('/', function() {
 > Output :-
 
 ![Routes View](Routes_view.png)
+
 
 ----
 
