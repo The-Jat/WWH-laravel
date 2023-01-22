@@ -24,7 +24,7 @@ You may display the contents of the name variable like so:
 <html lang="en">
     <p>{{$name}}</p>
 </html>
-``
+```
 Output = MaK
 
 
