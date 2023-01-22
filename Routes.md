@@ -44,7 +44,7 @@ Route::get('/sayJaat', function() {
 
 ![Routes non root](Routes_non_root.png)
 
-### Passing url wildcards:
+### Routing With Parameters - Passing url wildcards:
 
 > passed url = http://127.0.0.1:8000/sayJaat/7
 
@@ -78,6 +78,17 @@ Route::get('/sayJaat/{id}', function($id) {
 ```
 
 * Now if the user enters wildcard other than number it will show 404 not found.
+
+### Laravel Routing With Optional Parameters
+
+```
+Route::get('/page/{test?}', function ($test = 'tutsmake') {
+
+    echo "Welcome to ". $test;
+
+});
+```
+
 
 ---
 
