@@ -40,3 +40,8 @@ Laravel is an open-source web MVC framework for PHP. Laravel is a robust framewo
    ```
    laravel new project_name
    ```
+4. Change directory to newly created project and run the following command to make your project live on localhost.
+   ```
+   php artisan serve
+   ```
+
