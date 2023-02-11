@@ -16,6 +16,8 @@ In Laravel, routes are created inside the routes folder. They are created in the
 5. PATCH
 6. OPTIONS
 
+---
+
 ### Syntax: To write route is as given below:
 
 ```
