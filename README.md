@@ -33,6 +33,10 @@ Laravel is an open-source web MVC framework for PHP. Laravel is a robust framewo
 1. Installation of PHP local server (i.e XAMPP).
 2. Installation of php package manager Composer.
 3. Installation of global laravel via composer.
-   > composer global require laravel/installer
+   ```
+   composer global require laravel/installer
+   ```
 3. Create a new project in xampp/htdocs 
-  > laravel new project_name 
+   ```
+   laravel new project_name
+   ```
