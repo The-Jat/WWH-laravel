@@ -27,3 +27,12 @@ It's a good idea to use a software framework rather than re-inventing the wheel 
 ## What is Laravel ?
 
 Laravel is an open-source web MVC framework for PHP. Laravel is a robust framework that provides easy development of PHP web applications with features like a modular packaging system with a dedicated dependency manager, access to relational databases, and other utilities for application deployment and maintenance.
+
+## Steps To Install and use laravel
+
+1. Installation of PHP local server (i.e XAMPP).
+2. Installation of php package manager Composer.
+3. Installation of global laravel via composer.
+   > composer global require laravel/installer
+3. Create a new project in xampp/htdocs 
+  > laravel new project_name 
