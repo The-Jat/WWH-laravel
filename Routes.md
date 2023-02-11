@@ -7,7 +7,14 @@ In Laravel, routes are created inside the routes folder. They are created in the
 
 > routes/web.php     -> All web routes are defined here
 
-> There is 4 types of route methods GET, POST, PUT, DELETE
+> There is following types of route methods
+
+1. GET
+2. POST
+3. PUT
+4. DELETE
+5. PATCH
+6. OPTIONS
 
 ### Syntax: To write route is as given below:
 
