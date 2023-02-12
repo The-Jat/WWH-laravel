@@ -10,7 +10,7 @@ There are basically two types of syntax for it.
 
 * {{ }} = Besides it looking much cleaner, {{ $data }}, you get the additional protection of htmlspecialchars,
 
-Suppose if data = <h1>This is heading</h1>, it will be displayed as it is.
+Suppose if data = h1This is heading, it will be displayed as it is.
 
 * {{!! !!}} = It display unescaped data.
 
@@ -73,13 +73,45 @@ You may construct if statements using the @if, @elseif, @else, and @endif direct
 @endif
 ```
 
-For convenience, Blade also provides an @unless directive:
+> @unless directive:
+
+unless meaning jab tak in hindi.
+@unless directive is work reverse of if condition, i mean it's work with ! in the condition itself.
+
+```
+@unless ($name == "manish")
+    The name is not manish
+@endunless
+
+// it does not do anything if above condition is true.
+// when the above condition fails, it will print the string.
+// if $name = "manish", then it will not print anything.
+```
 
 ```
 @unless (Auth::check())
     You are not signed in.
 @endunless
 ```
+
+> @isset and @empty
+
+```
+@isset($records)
+    // $records is defined and is not null...
+@endisset
+ 
+@empty($records)
+    // $records is "empty"...
+@endempty
+```
+
+```
+@isset($id)
+    {{$id}}
+@endisset
+```
+
 
 ### Loops
 In addition to conditional statements, Blade provides simple directives for working with PHP's loop structures. Again, each of these directives functions identically to their PHP counterparts:
