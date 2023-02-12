@@ -344,9 +344,9 @@ Route::get('/pass_data/{name}/{id?}', function ($name, $id = null) {
 </h2>
 ```
 
-----
+4. Using Controller Class: Passing data using controller class is easy and is the right way.
 
-## Routes with controllers:
+Routes with controllers:
 
 Laravel provides us much more power than just writing a direct callback function. We can actually make our routes point to a function inside the controllers. To do so let’s manually create our controller first and call it mycontroller. Just go to app/Http/Controllers and create a file called mycontroller.php. Write following code in this file:
 
