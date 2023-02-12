@@ -6,6 +6,14 @@ Blade is the simple, yet powerful templating engine provided with Laravel. Unlik
 
 ### Displaying Data
 
+There are basically two types of syntax for it.
+
+* {{ }} = Besides it looking much cleaner, {{ $data }}, you get the additional protection of htmlspecialchars,
+
+Suppose if data = <h1>This is heading</h1>, it will be displayed as it is.
+
+* {{!! !!}} = It display unescaped data.
+
 You may display data passed to your Blade views by wrapping the variable in curly braces. For example, given the following route:
 
 > Web.php
