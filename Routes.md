@@ -213,6 +213,13 @@ Route::get('/', function() {
 
 ## Passing data to view from route.
 
+> There are several ways we can pass data to the view:
+
+
+1. Using view() =  We can directly pass the data in the ‘view()’ helper function by using the second parameter in the function which takes an array as key and value pair.
+
+In view(), the first parameter is the name of the view and the second parameter is where we have to specify the key and value pair of the data.
+
 * send from the route
 
 ```
@@ -288,6 +295,54 @@ Route::get('/welcome', function() {
 ```
 
 ![route to view data passing](route_to_view_data_passing.png)
+
+2. Using with(): The ‘with()’ is a method to pass individual form of data and is used with the ‘view’ helper function.
+
+
+Input url = http://127.0.0.1:8000/pass_data/manish/7
+
+web.php
+
+```
+Route::get('/pass_data/{name}/{id?}', function ($name, $id = null) {
+    $data = compact('name', 'id');
+    return view("welcome")->with($data);
+});
+```
+
+* receiver view = welcome.blade.php
+
+```
+<h1>
+    HI welcome
+</h1>
+<h2>
+    {{"name = ". $name . " id = " . $id}}
+</h2>
+```
+
+3. Using compact(): The ‘compact()’ is a PHP function that can be used for creating an array with variable and there value. Here the name on the variable is the key and the variable content is the value.
+
+Input Url = http://127.0.0.1:8000/pass_data/manish/7
+
+* sender route = web.php
+
+```
+Route::get('/pass_data/{name}/{id?}', function ($name, $id = null) {
+    return view('welcome', compact('name', 'id'));
+});
+```
+
+* receiver view = welcome.blade.php
+
+```
+<h1>
+    HI welcome
+</h1>
+<h2>
+    {{"name = ". $name . " id = " . $id}}
+</h2>
+```
 
 ----
 
