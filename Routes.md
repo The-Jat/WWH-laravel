@@ -65,6 +65,29 @@ Route::get('/sayJaat/{id}', function($id) {
 
 ![Routes passing url parameters](route_parameter_passing_str.png)
 
+### passing optional parameters:
+
+> passed url = http:127.0.0.1:8000/passed_data/man/7
+
+```
+Route::get('/pass_data/{name}/{id?}', function ($name, $id = null) {
+    $data = compact('name', 'id');
+    print_r($data);
+});
+```
+
+Description = Here we need to pass name as mandatory parameters but id is an optional one.
+
+The compact() function creates an array from variables and their values.
+
+Note: Any strings that does not match variable names will be skipped.
+
+The print_r() function prints the information about a variable in a more human-readable way.
+
+![Routes passing optional url parameters](route_passing_optional_param.png)
+
+
+
 #### with response method
 
 ```
