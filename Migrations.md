@@ -68,6 +68,7 @@ This command will run the up() function in the migration class file and will cre
 
 Note: This command will run the up() function and create all the tables in the database for all the migration file in the database/migrations directory.
 
+#### rollback
 
 For rolling back latest migration we have command
 ```
@@ -80,6 +81,24 @@ when we have to rollback till specific steps we can pass steps in rollback comma
 php artisan migrate:rollback --step=3
 ```
 this will rollback the migration upto 3 step starting from latest.
+
+#### reset
+The migrate:reset command will roll back all of your application's migrations:
+```
+php artisan migrate:reset
+```
+#### If you would like to see which migrations have run thus far, you may use the migrate:status Artisan command:
+```
+php artisan migrate:status
+```
+
+#### To see the SQL statments executed during migrations.
+
+If you would like to see the SQL statements that will be executed by the migrations without actually running them, you may provide the --pretend flag to the migrate command:
+
+```
+php artisan migrate --pretend
+```
 
 
 
