@@ -21,11 +21,20 @@ php artisan make:migration create_contacts_table
 ```
 
 this will generate a file in database\migrations folder.
+All the migration file that we create using the artisan command are located at database/migrations directory. So, after we run the above command, it will generate a PHP file with the name we specified with the current date and time.
 
 The file consist of new class extending the migration class of LARAVEL.
 
 The new class consist of 2 major function up() & down().
 The up() function holds all information about migrating the file
+
+#### Basic Structure of a Migration:
+
+A migration file contains a class with the name of the file specified while creating the migration and it extends Migration. In that we have two functions, the first one is up() function and the second one is down() function. The up() is called when we run the migration to create a table and columns specified and the ‘down()’ function is called when we want to undo the creation of ‘up()’ function.
+
+In the up() function, we have create method of the Schema facade (schema builder) and as we say before, the first argument in this function is the name of the table to be created. The second argument is a function with a Blueprint object as a parameter and for defining the table.
+
+In the down() function, we have a dropIfExists method of the schema builder which when called will drop the table.
 
 ```
 public function up()
@@ -55,11 +64,16 @@ To run a migration we need to use the command
 ```
 php artisan migrate
 ```
+This command will run the up() function in the migration class file and will create the table with the all columns specified.
+
+Note: This command will run the up() function and create all the tables in the database for all the migration file in the database/migrations directory.
+
 
 For rolling back latest migration we have command
 ```
 php artisan migrate:rollback
 ```
+This command will run the down() function in the migration class file.
 
 when we have to rollback till specific steps we can pass steps in rollback command like
 ```
