@@ -17,12 +17,15 @@ Laravel Migration allows you to add a new column or delete the records in your d
 
 ### Create a migration
 ```
-php artisan make:migration create_contacts_table
+php artisan make:migration create_contacts_table    // this will generate migration.
+or 
+php artisan make:model YourModelName -c -m      // this will generate model along with controller and migration.
 ```
+
+this will generate a file in database\migrations folder.
 
 Go to /database/migrations/xxxx_xx_xx_xxxxxx_create_contacts_table.php
 
-this will generate a file in database\migrations folder.
 All the migration file that we create using the artisan command are located at database/migrations directory. So, after we run the above command, it will generate a PHP file with the name we specified with the current date and time.
 
 The file consist of new class extending the migration class of LARAVEL.
