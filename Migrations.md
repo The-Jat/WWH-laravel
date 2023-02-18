@@ -87,7 +87,10 @@ The migrate:reset command will roll back all of your application's migrations:
 ```
 php artisan migrate:reset
 ```
-#### If you would like to see which migrations have run thus far, you may use the migrate:status Artisan command:
+
+#### The migrate:reset command will roll back all of your application's migrations:
+
+If you would like to see which migrations have run thus far, you may use the migrate:status Artisan command:
 ```
 php artisan migrate:status
 ```
