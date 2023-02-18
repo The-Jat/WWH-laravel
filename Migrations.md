@@ -41,9 +41,10 @@ public function up()
 {
     Schema::create('contacts', function (Blueprint $table) 
     {
-            $table->id();
-            $table->string('name');
+            $table->id();   // Each user has an id
+            $table->string('name');     // Each user has a name
             $table->string('mobile_no');
+            $table->string('email')->unique();        // Each user has a unique email
             $table->boolean('status');
             $table->timestamps();
     });
