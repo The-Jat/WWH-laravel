@@ -7,6 +7,8 @@ will pass through the middleware, and then the middleware verifies whether the r
 If the user's request is authenticated then the request is sent to the backend. If the user request is not authenticated,
 then the middleware will redirect the user to the login screen.
 
+Through middleware, you can inspect and take action before and/or after a specific request is handled and processed by Laravel. For instance, you can have middleware that runs for a specific route, the members' area route, to check whether the user trying to access this route is indeed a member. Accordingly, the middleware can take action to either redirect the user to the membership page to become a member or allow the request to go through for a registered member.
+
 
 ### Creating Middleware
 
